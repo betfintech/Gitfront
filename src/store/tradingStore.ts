@@ -139,7 +139,7 @@ interface TradingStore {
   toggleDarkMode: () => void;
 }
 
-const DEFAULT_BACKEND_URL = (typeof window !== 'undefined' && (window as any).__BACKEND_URL__) || 'http://localhost:3001';
+const DEFAULT_BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
 
 export const useTradingStore = create<TradingStore>((set) => ({
   wsConnected: false,
