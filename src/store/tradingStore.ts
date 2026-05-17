@@ -139,7 +139,7 @@ interface TradingStore {
   toggleDarkMode: () => void;
 }
 
-const DEFAULT_BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+const DEFAULT_BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://web-production-72cbf.up.railway.app';
 
 export const useTradingStore = create<TradingStore>((set) => ({
   wsConnected: false,
